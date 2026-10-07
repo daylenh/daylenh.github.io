@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Family</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>My Family</h1>
+
+    <p id="intro">
+        Let me tell you about my family.
+    </p>
+    
+    <button id="introButton" onclick="showMinh()">Next</button>
+    
+    
+    <div id="familyMember" style="display: none;">
+    
+        <h2>Minh</h2>
+    
+        <p>
+            Minh is my son.<br>
+            He has always worked very hard.
+        </p>
+    
+        <button onclick="showMai()">Next</button>
+    
+    </div>
+
+
+    <!-- MAI -->
+    <div id="mai" style="display: none;">
+        <h2>Mai</h2>
+
+        <p>
+            Mai is my daughter.<br>
+            She always helped me around the house.
+        </p>
+
+        <button onclick="showBao()">Next</button>
+    </div>
+
+
+    <!-- BAO -->
+    <div id="bao" style="display: none;">
+
+        <h2 class="bao-text">Bao</h2>
+
+        <p class="bao-text">
+            My grandchild.
+        </p>
+
+        <p class="bao-text">
+            They used to visit me all the time.
+        </p>
+
+        <p class="bao-text">
+            They would run through the house and sit with me in the kitchen.
+        </p>
+
+        <p class="bao-text">
+            I remember their face...
+        </p>
+
+        <p class="bao-text">
+            I think I do.
+        </p>
+
+        <button id="baoButton" onclick="startBaoMemory()">Next</button>
+
+    </div>
+
+    <div id="afterBao" style="display: none;">
+
+        <p>
+            Oh! I forgot.
+            <br>
+            I need to make dinner!
+        </p>
+    
+        <form action="kitchen.html">
+            <button type="submit">Go to the kitchen</button>
+        </form>
+    
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

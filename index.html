@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hello there!</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <h1>Hello!</h1>
+
+    <p class="intro-text">
+        Come sit with me and let us talk!<br>
+        Hello, my name is Lan.<br>
+        I am 84 years old.
+    </p>
+    
+    <p class="intro-text">
+        Do you know what day it is?<br>
+        Today is Tết, my favorite holiday!<br>
+        A holiday where you celebrate with your family.
+    </p>
+    
+    <p class="intro-text">
+        I miss my family.<br>
+        They used to live with me before they moved.<br>
+        The house would be so full of noise and laughter.<br>
+        But that is in the past, let me tell you more about my family.
+    </p>
+    
+    <button id="familyButton" style="display: none;">
+        View my family
+    </button>
+    <!--
+    after click, show the message "But you look familiar... Have we met before?" and a button to continue to family.html
+    -->
+    
+    <div id="memoryMessage" style="display: none;">
+        <p>
+            But you look familiar...<br>
+            Have we met before?
+        </p>
+    
+        <button onclick="goToFamily()">Continue</button>
+    </div>
+    
+    <script src="script.js"></script>
+</html>
