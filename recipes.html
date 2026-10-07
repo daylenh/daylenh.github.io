@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tết Braised Pork and Eggs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="recipe-page">
+
+<main class="recipe-card">
+    <div id="recipe">
+
+        <p>A favorite from Lan's kitchen</p>
+
+        <h1>Tết Braised Pork and Eggs</h1>
+
+        <p>
+            A comforting Vietnamese family dish, slowly simmered until the pork is tender
+            and the eggs have soaked up the savory-sweet broth. Serve with warm rice.
+        </p>
+
+        <h2>Ingredients</h2>
+
+        <ul>
+            <li>1 kg pork belly, cut into large bite-size pieces</li>
+            <li>6 eggs, hard-boiled and peeled</li>
+            <li>2 tablespoons fish sauce</li>
+            <li>2 tablespoons sugar</li>
+            <li>2 shallots, finely chopped</li>
+            <li>1 cup coconut water</li>
+            <li>2 cups water</li>
+            <li>Black pepper, to taste</li>
+        </ul>
+
+        <h2>Method</h2>
+
+        <ol>
+            <li>
+                Melt the sugar in a heavy pot over medium heat until it turns amber.
+                Carefully stir in a splash of water to make the caramel.
+            </li>
+
+            <li>
+                Add the shallots and pork. Stir to coat, then season with fish sauce
+                and black pepper.
+            </li>
+
+            <li>
+                Pour in the coconut water and enough water to mostly cover the pork.
+                Bring to a gentle simmer, cover, and cook until the pork is tender.
+            </li>
+
+            <li>
+                Add the boiled eggs and simmer uncovered for another 20 minutes.
+            </li>
+
+            <li>
+                Taste and adjust the seasoning. Serve warm over rice.
+            </li>
+        </ol>
+
+        <button id="nextRecipe" onclick="startRecipeMemory()">
+            Next
+        </button>
+
+    </div>
+
+    <div id="memory" style="display: none;">
+
+        <p class="recipe-memory-text">
+            Oh... this recipe.
+        </p>
+
+        <p class="recipe-memory-text">
+            This is my grandson's favorite dish.
+        </p>
+
+        <p class="recipe-memory-text">
+            I used to make it for him every so often.
+        </p>
+
+        <p class="recipe-memory-text">
+            He would always wait in the kitchen while I cooked.
+        </p>
+
+        <p class="recipe-memory-text">
+            I miss him.
+        </p>
+
+        <p class="recipe-memory-text">
+            I remember his face...
+        </p>
+
+        <p class="recipe-memory-text">
+            I think I do.
+        </p>
+
+        <p class="recipe-memory-text confused">
+            What was his name again?
+        </p>
+
+        <p class="recipe-memory-text">
+            I know I love him.
+        </p>
+
+        <p class="recipe-memory-text confused">
+            I just can't remember his name all of the sudden. ⬥︎♋︎⬧︎ ♓︎⧫︎ ♌︎♋︎□︎✍︎???
+        </p>
+
+        <button id="nextMemory" onclick="goToTetPreparation()" style="display: none;">
+            Next
+        </button>
+    </div>
+
+    <div id="tetPreparation" style="display: none;">
+
+    <p>
+        Let's set the dining table and altar to celebrate Tết!
+    </p>
+
+    <button onclick="goToDining()">
+        Next
+    </button>
+</div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

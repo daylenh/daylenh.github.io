@@ -7,15 +7,52 @@
         <link rel="stylesheet" href="styles.css">
     </head>
 
-    <h1>Welcome to my kitchen!</h1>
+    <body>
+        <h1>Welcome to my kitchen!</h1>
 
-    <!--
-        make clickable objects for items in the kitchen like sauces, and what not
-        have a clickable object for the recipe then open up the recipe in a new page (talking about how
-        this is your grandchildren's favorite dish and how you used to make it for them)
-    -->
+        <div class="kitchen">
+            <img src="images/kitchen/kitchen.jpg" alt="Lan's Kitchen">
+            <button class="hotspot pan" type="button" aria-label="Remember the black pan on the stove"
+                aria-controls="panMemory" data-memory="panMemory"
+                onclick="showMemory('panMemory', this)">
+            </button>
 
+            <button class="hotspot recipe" type="button" aria-label="The recipe is locked until the pan, sink, and sauce memories are opened"
+                onclick="openRecipe()" disabled>
+            </button>
 
+            <button class="hotspot sink" type="button" aria-label="Remember the sink"
+                aria-controls="sinkMemory" data-memory="sinkMemory"
+                onclick="showMemory('sinkMemory', this)">
+            </button>
+            
+            <button class="hotspot sauce" type="button" aria-label="Remember the sauce bottle"
+                aria-controls="sauceMemory" data-memory="sauceMemory"
+                onclick="showMemory('sauceMemory', this)">
+            </button>
 
+            <div id="panMemory" class="memory pan-memory" role="status" aria-live="polite">
+                <h2>The Pan</h2>
+                <p>
+                    This is my pan. I use this every day. I remember Bao burning his hand on it. Poor kid.
+                </p>
+            </div>
 
+            <div id="sinkMemory" class="memory sink-memory" role="status" aria-live="polite">
+                <h2>The Sink</h2>
+                <p>This is a sink. I remember when Bao left it on and flooded the kitchen. Good times!</p>
+            </div>
+
+            <div id="sauceMemory" class="memory sauce-memory" role="status" aria-live="polite">
+                <h2>The Sauce</h2>
+                <p>This is my secret sauce that makes anything taste better.</p>
+            </div>
+        </div>
+
+        <p id="recipePrompt" class="recipe-prompt" aria-live="polite">
+            Explore the pan, sink, and sauce to uncover the recipe.
+        </p>
+
+        <script src="script.js"></script>
+    </body>
 </html>

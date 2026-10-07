@@ -1,25 +1,32 @@
-// button to show the memory message
-document.getElementById("familyButton").onclick = function() {
-    document.getElementById("memoryMessage").style.display = "block";
-    document.getElementById("familyButton").style.display = "none";
-};
-
-// button to hide the memory message
-const paragraphs = document.querySelectorAll(".intro-text");
 const familyButton = document.getElementById("familyButton");
+if (familyButton) {
+    familyButton.onclick = function() {
+        document.getElementById("memoryMessage").style.display = "block";
+        familyButton.style.display = "none";
+    };
 
-// Show each paragraph one by one with a delay
-paragraphs.forEach(function(paragraph, index) {
-    setTimeout(function() {
-        paragraph.classList.add("show");
-        if (index === paragraphs.length - 1) {
-            setTimeout(function() {
-                familyButton.style.display = "block";
-            }, 4500);
-        }
+    const paragraphs = document.querySelectorAll(".intro-text");
 
-    }, index * 4500);
-});
+    paragraphs.forEach(function(paragraph, index) {
+        setTimeout(function() {
+            paragraph.classList.add("show");
+            if (index === paragraphs.length - 1) {
+                setTimeout(function() {
+                    familyButton.style.display = "block";
+                }, 4500);
+            }
+        }, index * 4500);
+    });
+}
+
+const recipePage = document.querySelector("body.recipe-page");
+if (recipePage) {
+    requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+            recipePage.classList.add("is-visible");
+        });
+    });
+}
 
 // show the memory message when the family button is clicked slowly
 function showMemoryMessage() {
@@ -102,4 +109,103 @@ function forgetBao() {
         document.getElementById("afterBao").style.display = "block";
     }, text.length * 1800 + 2500);
 
+}
+
+const openedKitchenMemories = new Set();
+
+function showMemory(id, hotspot) {
+    const memory = document.getElementById(id);
+    if (!memory || !hotspot || openedKitchenMemories.has(id)) {
+        return;
+    }
+
+    memory.classList.add("is-visible");
+    openedKitchenMemories.add(id);
+    hotspot.remove();
+
+    if (openedKitchenMemories.size === 3) {
+        const recipeHotspot = document.querySelector(".hotspot.recipe");
+        const recipePrompt = document.getElementById("recipePrompt");
+        if (recipeHotspot) {
+            recipeHotspot.disabled = false;
+            recipeHotspot.setAttribute("aria-label", "Open the family recipe");
+        }
+        if (recipePrompt) {
+            recipePrompt.textContent = "You found the memories. Click the recipe on the wall to read it.";
+        }
+    }
+}
+
+function openRecipe() {
+    const recipeHotspot = document.querySelector(".hotspot.recipe");
+    if (!recipeHotspot || recipeHotspot.disabled || document.body.classList.contains("is-leaving")) {
+        return;
+    }
+
+    document.body.classList.add("is-leaving");
+    window.setTimeout(function() {
+        window.location.href = "recipes.html";
+    }, window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 1800);
+}
+
+function startRecipeMemory() {
+
+    // Hide the recipe
+    document.getElementById("recipe").style.display = "none";
+
+    // Show the memory
+    document.getElementById("memory").style.display = "block";
+
+    // Get all memory paragraphs
+    const memories = document.querySelectorAll(".recipe-memory-text");
+
+    // Slowly show each memory
+    memories.forEach(function(memory, index) {
+
+        setTimeout(function() {
+            memory.classList.add("show");
+        }, index * 4000);
+
+    });
+}
+
+function startRecipeMemory() {
+    document.getElementById("recipe").style.display = "none";
+    document.getElementById("memory").style.display = "block";
+
+    const memories = document.querySelectorAll(".recipe-memory-text");
+
+    memories.forEach(function(memory, index) {
+        setTimeout(function() {
+            memory.classList.add("show");
+        }, index * 4000);
+    });
+
+    // Show Next button after all memories have appeared
+    setTimeout(function() {
+        document.getElementById("nextMemory").style.display = "block";
+    }, memories.length * 4000 + 2000);
+}
+
+
+function goToTetPreparation() {
+
+    // Clear all memory text
+    const memories = document.querySelectorAll(".recipe-memory-text");
+
+    memories.forEach(function(memory) {
+        memory.classList.remove("show");
+        memory.style.display = "none";
+    });
+
+    // Hide the memory section
+    document.getElementById("memory").style.display = "none";
+
+    // Show the Tết preparation message
+    document.getElementById("tetPreparation").style.display = "block";
+}
+
+
+function goToDining() {
+    window.location.href = "dining.html";
 }
