@@ -4,14 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dining Room</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Dining Room</h1>
-    <p>
-        <i> <i>
-    </p>
-    <p>
+    <div class="dining">
+        <img src="images/dining/dining.jpg" alt="Lan's Dining Room">
+
+        <button class="hotspot dining-hotspot book" type="button"
+            aria-label="Open the book and read the poem about missing and remembering Bao"
+            aria-controls="bookMemory"
+            onclick="showDiningMemory('bookMemory', this)">
+        </button>
+
+        <button class="hotspot dining-hotspot toys" type="button"
+            aria-label="Remember the toys on the shelf"
+            aria-controls="toysMemory"
+            onclick="showDiningMemory('toysMemory', this)">
+        </button>
+
+        <button class="hotspot dining-hotspot rainbow-stick" type="button"
+            aria-label="Remember the rainbow stick"
+            aria-controls="rainbowStickMemory"
+            onclick="showDiningMemory('rainbowStickMemory', this)">
+        </button>
+
+        <button class="hotspot dining-hotspot medicine" type="button"
+            aria-label="The medicine bottle is locked until the book, toys, and rainbow stick memories are opened"
+            onclick="openMeds()" disabled>
+        </button>
+
+        <div id="bookMemory" class="memory dining-memory book-memory" role="status" aria-live="polite">
+            <h2>The Book</h2>
+            <p>
+                A poem from my grandson. It is a beautiful poem that reminds me 
+                of the importance of remembering and cherishing our loved ones.
+            </p>
+            <button type="button" onclick="openPoem()">Read the poem</button>
+        </div>
+
+        <div id="toysMemory" class="memory dining-memory toys-memory" role="status" aria-live="polite">
+            <h2>The Toys</h2>
+            <p>Toys left by my grandson. Oh, how I remember how he used to play with them!</p>
+        </div>
+
+        <div id="rainbowStickMemory" class="memory dining-memory rainbow-stick-memory" role="status" aria-live="polite">
+            <h2>The Rainbow Stick</h2>
+            <p>A colorful dust cleaner that I used to discipline my kids.</p>
+        </div>
+    </div>
+
+    <p id="diningPrompt" class="recipe-prompt" aria-live="polite">
+        Explore the book, toys, and rainbow stick to unlock the medicine bottle.
     </p>
 
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poem</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="poem-page">
+
+    <main class="poem-card">
+        <section id="poem" aria-live="polite">
+            <p>This is a poem gifted by my grandson.</p>
+            <p class="poem-line">In Vietnamese,</p>
+            <p class="poem-line">the word for missing someone</p>
+            <p class="poem-line">and remembering them</p>
+            <p class="poem-line">is the same: nhớ.</p>
+            <p class="poem-line">Sometimes,</p>
+            <p class="poem-line">when you ask me over the phone,</p>
+            <p class="poem-line poem-quote"><i>Con nhớ me khong?</i></p>
+            <p class="poem-line">I flinch, thinking you meant,</p>
+            <p class="poem-line poem-quote"><i>Do you remember me?</i></p>
+            </p>
+
+            <button id="nextPoem" type="button" onclick="startPoemMemory()" hidden>
+                Next
+            </button>
+        </section>
+
+        <section id="poemMemory" aria-live="polite" hidden>
+            <p class="poem-memory-text">
+                I miss you.
+            </p>
+            <p class="poem-memory-text">
+                I know I miss you.
+            </p>
+            <p class="poem-memory-text">
+                But sometimes when I look at you,
+                I don't know who I am missing.
+            </p>
+            <p class="poem-memory-text">
+                Your face feels familiar.
+            </p>
+            <p class="poem-memory-text">
+                Your voice feels familiar.
+            </p>
+            <p class="poem-memory-text">
+                But your name...
+            </p>
+            <p class="poem-memory-text">
+                It keeps slipping away from me.
+            </p>
+            <p class="poem-memory-text poem-conclusion">
+                I miss you more than I remember you.
+            </p>
+            <button id="backToDining" type="button" onclick="goToDining()" hidden>
+                Back to Dining Room
+            </button>
+        </section>
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

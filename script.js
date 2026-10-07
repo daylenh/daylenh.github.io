@@ -136,6 +136,86 @@ function showMemory(id, hotspot) {
     }
 }
 
+const openedDiningMemories = new Set();
+
+function showDiningMemory(id, hotspot) {
+    const memory = document.getElementById(id);
+    if (!memory || !hotspot || openedDiningMemories.has(id)) {
+        return;
+    }
+
+    memory.classList.add("is-visible");
+    openedDiningMemories.add(id);
+    hotspot.remove();
+
+    if (openedDiningMemories.size === 3) {
+        const medicineHotspot = document.querySelector(".hotspot.medicine");
+        const diningPrompt = document.getElementById("diningPrompt");
+        if (medicineHotspot) {
+            medicineHotspot.disabled = false;
+            medicineHotspot.setAttribute("aria-label", "Open the medicine bottle");
+        }
+        if (diningPrompt) {
+            diningPrompt.textContent = "You found the memories. Click the medicine bottle to continue.";
+        }
+    }
+}
+
+function openMeds() {
+    const medicineHotspot = document.querySelector(".hotspot.medicine");
+    if (!medicineHotspot || medicineHotspot.disabled) {
+        return;
+    }
+
+    window.location.href = "meds.html";
+}
+
+function openPoem() {
+    window.location.href = "poem.html";
+}
+
+const poemPage = document.querySelector("body.poem-page");
+if (poemPage) {
+    const poemLines = document.querySelectorAll("#poem .poem-line");
+    const nextPoem = document.getElementById("nextPoem");
+    const revealInterval = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 2200;
+
+    poemLines.forEach(function(line, index) {
+        window.setTimeout(function() {
+            line.classList.add("show");
+            if (index === poemLines.length - 1 && nextPoem) {
+                nextPoem.hidden = false;
+            }
+        }, index * revealInterval);
+    });
+}
+
+function startPoemMemory() {
+    const poem = document.getElementById("poem");
+    const memory = document.getElementById("poemMemory");
+    if (!poem || !memory) {
+        return;
+    }
+
+    poem.hidden = true;
+    memory.hidden = false;
+
+    const memories = memory.querySelectorAll(".poem-memory-text");
+    const revealInterval = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 2200;
+    const backButton = document.getElementById("backToDining");
+    memories.forEach(function(line, index) {
+        window.setTimeout(function() {
+            line.classList.add("show");
+        }, index * revealInterval);
+    });
+
+    window.setTimeout(function() {
+        if (backButton) {
+            backButton.hidden = false;
+        }
+    }, memories.length ? (memories.length - 1) * revealInterval + (revealInterval ? 1200 : 0) : 0);
+}
+
 function openRecipe() {
     const recipeHotspot = document.querySelector(".hotspot.recipe");
     if (!recipeHotspot || recipeHotspot.disabled || document.body.classList.contains("is-leaving")) {
@@ -147,6 +227,8 @@ function openRecipe() {
         window.location.href = "recipes.html";
     }, window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 1800);
 }
+
+
 
 function startRecipeMemory() {
 

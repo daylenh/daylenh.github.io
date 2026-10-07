@@ -44,6 +44,18 @@
     height: auto;
 }
 
+.dining {
+    position: relative;
+    width: min(100%, 1000px);
+    margin: 0 auto;
+}
+
+.dining img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .hotspot {
     position: absolute;
     background: transparent;
@@ -87,7 +99,7 @@
 .sink {
     left: 0%;
     top: 75%;
-    width: 43%;
+    width: 30%;
     height: 13%;
 }
 
@@ -97,6 +109,38 @@
     top: 59%;
     width: 5%;
     height: 16%;
+}
+
+.dining-hotspot {
+    z-index: 1;
+}
+
+.book {
+    left: 15%;
+    top: 72%;
+    width: 10%;
+    height: 10%;
+}
+
+.toys {
+    left: 52%;
+    top: 24%;
+    width: 20%;
+    height: 18%;
+}
+
+.rainbow-stick {
+    left: 92%;
+    top: 35%;
+    width: 5%;
+    height: 20%;
+}
+
+.medicine {
+    left: 61%;
+    top: 49%;
+    width: 5%;
+    height: 11%;
 }
 
 .memory {
@@ -141,6 +185,25 @@
     left: 30%;
 }
 
+.dining-memory {
+    z-index: 2;
+}
+
+.book-memory {
+    bottom: 11%;
+    left: 14%;
+}
+
+.toys-memory {
+    top: 32%;
+    left: 52%;
+}
+
+.rainbow-stick-memory {
+    top: 57%;
+    right: 0%;
+}
+
 .recipe-prompt {
     min-height: 1.5em;
     margin: 8px 0 24px;
@@ -183,6 +246,46 @@ body.recipe-page.is-visible {
     margin-bottom: 6px;
 }
 
+.poem-card {
+    width: min(90vw, 700px);
+    margin: 20px auto;
+    padding: clamp(20px, 5vw, 44px);
+    color: #302317;
+    background: #fff8e2;
+    border: 1px solid #b69a69;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.22);
+    line-height: 1.6;
+}
+
+.poem-line,
+.poem-memory-text {
+    opacity: 0;
+    filter: blur(5px);
+    transition: opacity 1.2s ease, filter 1.2s ease;
+}
+
+.poem-line.show,
+.poem-memory-text.show {
+    opacity: 1;
+    filter: blur(0);
+}
+
+.poem-quote {
+    margin-left: 1.5em;
+}
+
+.poem-conclusion {
+    margin-top: 1.5em;
+    color: #7b351f;
+    font-size: 1.25em;
+    text-align: center;
+    text-shadow: 0 0 14px rgba(191, 117, 53, 0.45);
+}
+
+[hidden] {
+    display: none !important;
+}
+
 @keyframes memoryGlow {
     from {
         background-color: rgba(255, 255, 220, 0.08);
@@ -222,6 +325,8 @@ body {
     }
 
     .memory.is-visible,
+    .poem-line,
+    .poem-memory-text,
     body,
     body.recipe-page {
         animation-duration: 0.01ms;
