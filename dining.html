@@ -6,7 +6,9 @@
     <title>Dining Room</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="dining-page">
+    <div class="page-number" aria-label="Page 5 of 11">Page 05 / 11</div>
+    <button class="back-button" type="button" aria-label="Go back to previous page" onclick="goBack()">Back</button>
     <h1>Dining Room</h1>
     <div class="dining">
         <img src="images/dining/dining.jpg" alt="Lan's Dining Room">
@@ -30,7 +32,7 @@
         </button>
 
         <button class="hotspot dining-hotspot medicine" type="button"
-            aria-label="The medicine bottle is locked until the book, toys, and rainbow stick memories are opened"
+            aria-label="The medicine bottle is locked until you open all three memories and click Read the poem"
             onclick="openMeds()" disabled>
         </button>
 
@@ -55,7 +57,7 @@
     </div>
 
     <p id="diningPrompt" class="recipe-prompt" aria-live="polite">
-        Explore the book, toys, and rainbow stick to unlock the medicine bottle.
+        Explore the book, toys, and rainbow stick, then click Read the poem to unlock the medicine bottle.
     </p>
 
     <script src="script.js"></script>

@@ -7,71 +7,71 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="family-page">
 
-    <h1>My Family</h1>
+    <div class="page-number" aria-label="Page 2 of 11">Page 02 / 11</div>
+    <button class="back-button" type="button" aria-label="Go back to previous page" onclick="goBack()">Back</button>
+    <h1>Lan's Family</h1>
 
-    <p id="intro">
-        Let me tell you about my family.
-    </p>
-    
-    <button id="introButton" onclick="showMinh()">Next</button>
-    
-    
-    <div id="familyMember" style="display: none;">
-    
-        <h2>Minh</h2>
-    
-        <p>
-            Minh is my son.<br>
-            He has always worked very hard.
-        </p>
-    
-        <button onclick="showMai()">Next</button>
-    
-    </div>
+    <p id="familyPrompt" aria-live="polite">Click a family card to learn about them.</p>
 
-    <div id="mai" style="display: none;">
-        <h2>Mai</h2>
+    <main id="familyCards" class="family-cards">
+        <section class="family-card-wrap">
+            <button class="family-card" id="minhCard" type="button"
+                aria-expanded="false" aria-controls="minhDetails"
+                onclick="toggleFamilyCard('minh')">
+                <span class="card-kicker">Her son</span>
+                <span class="card-name">Minh</span>
+                <span class="card-hint">Click to turn over</span>
+            </button>
+            <div class="family-details" id="minhDetails" hidden>
+                <h2>Minh</h2>
+                <p>Minh is my son. He has always worked very hard. </p>
+            </div>
+        </section>
 
-        <p>
-            Mai is my daughter.<br>
-            She always helped me around the house.
-        </p>
+        <section class="family-card-wrap">
+            <button class="family-card" id="maiCard" type="button"
+                aria-expanded="false" aria-controls="maiDetails"
+                onclick="toggleFamilyCard('mai')">
+                <span class="card-kicker">Her daughter</span>
+                <span class="card-name">Mai</span>
+                <span class="card-hint">Click to turn over</span>
+            </button>
+            <div class="family-details" id="maiDetails" hidden>
+                <h2>Mai</h2>
+                <p>Mai is my daughter. She always helped me around the house.</p>
+            </div>
+        </section>
 
-        <button onclick="showBao()">Next</button>
-    </div>
+        <section class="family-card-wrap">
+            <button class="family-card" id="baoCard" type="button"
+                aria-expanded="false" aria-controls="baoDetails"
+                onclick="toggleFamilyCard('bao')" disabled>
+                <span class="card-kicker">Her grandchild</span>
+                <span class="card-name">???</span>
+                <span class="card-hint">Open Minh and Mai's cards first</span>
+            </button>
+            <div class="family-details" id="baoDetails" hidden>
+                <h2>???</h2>
+                <p>He is my grandson. He is a sweet child, always full of energy and sincerity.</p>
+                <button id="baoButton" type="button" onclick="startBaoMemory()">Continue</button>
+            </div>
+            <div id="baoMemory" class="family-details bao-memory" hidden>
+                <p class="bao-text">My grandchild.</p>
+                <p class="bao-text">He used to visit me all the time.</p>
+                <p class="bao-text">He would run through the house and sit with me in the kitchen while I cook.</p>
+                <p class="bao-text">What was his name again?</p>
+            </div>
+        </section>
+    </main>
 
-    <div id="bao" style="display: none;">
-
-        <h2 class="bao-text">???</h2>
-
-        <p class="bao-text">
-            My grandchild.
-        </p>
-
-        <p class="bao-text">
-            They used to visit me all the time.
-        </p>
-
-        <p class="bao-text">
-            They would run through the house and sit with me in the kitchen.
-        </p>
-
-        <p class="bao-text">
-            What was his name again?
-        </p>
-
-        <button id="baoButton" onclick="startBaoMemory()">Next</button>
-
-    </div>
-
-    <div id="afterBao" style="display: none;">
+    <div id="afterBao" class="after-bao" role="status" aria-live="polite" hidden>
 
         <p>
             Oh! I forgot.
             <br>
-            I need to make dinner!
+            I need to make dinner for Tết!
         </p>
     
         <form action="kitchen.html">

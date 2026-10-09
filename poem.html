@@ -9,9 +9,11 @@
 
 <body class="poem-page">
 
+    <div class="page-number" aria-label="Page 6 of 11">Page 06 / 11</div>
+    <button class="back-button" type="button" aria-label="Go back to previous page" onclick="goBack()">Back</button>
     <main class="poem-card">
         <section id="poem" aria-live="polite">
-            <p>This is a poem gifted by my grandson.</p>
+            <p class="poem-line">This is a poem gifted by my grandson.</p>
             <p class="poem-line">In Vietnamese,</p>
             <p class="poem-line">the word for missing someone</p>
             <p class="poem-line">and remembering them</p>
@@ -21,8 +23,6 @@
             <p class="poem-line poem-quote"><i>Con nhớ me khong?</i></p>
             <p class="poem-line">I flinch, thinking you meant,</p>
             <p class="poem-line poem-quote"><i>Do you remember me?</i></p>
-            </p>
-
             <button id="nextPoem" type="button" onclick="startPoemMemory()" hidden>
                 Next
             </button>
@@ -30,7 +30,7 @@
 
         <section id="poemMemory" aria-live="polite" hidden>
             <p class="poem-memory-text">
-                I miss you.
+                My grandson, I miss you.
             </p>
             <p class="poem-memory-text">
                 I know I miss you.

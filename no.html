@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No, Grandma</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="no-page">
+
+    <div class="page-number" aria-label="Page 10 of 11">Page 10 / 11</div>
+    <button class="back-button" type="button" aria-label="Go back to previous page" onclick="goBack()">Back</button>
+    <h1>No I am not...</h1>
+
+    <div id="noIntro">
+        <p class="no-intro-text">Oh, I'm sorry.</p>
+        <p class="no-intro-text">I must have mistaken you for someone else.</p>
+
+        <button onclick="startNoMemory()">Next</button>
+    </div>
+
+    <div id="noMemory" style="display: none;">
+
+        <p class="ending-memory-text">
+            But why do you feel so familiar?
+        </p>
+
+        <p class="ending-memory-text">
+            Have we met before?
+        </p>
+
+        <p class="ending-memory-text">
+            You remind me of someone I love.
+        </p>
+
+        <p class="ending-memory-text">
+            Someone who used to visit me.
+        </p>
+
+        <p class="ending-memory-text">
+            Someone who sat beside me while I cooked.
+        </p>
+
+        <p class="ending-memory-text">
+            Someone who called me Grandma.
+        </p>
+
+        <p class="ending-memory-text">
+            I can almost hear his voice. His face.
+        </p>
+
+        <p class="ending-memory-text">
+            But every time I try to remember...
+        </p>
+
+        <p class="ending-memory-text">
+            There's nothing there.
+        </p>
+
+        <p class="ending-memory-text">
+            I'm sorry.
+        </p>
+
+        <button id="noNextButton" style="display: none;"
+                onclick="window.location.href='goodbye.html'">
+            Next
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

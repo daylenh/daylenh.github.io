@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Phone Call</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="phone-page">
+
+    <div class="page-number" aria-label="Page 8 of 11">Page 08 / 11</div>
+    <button class="back-button" type="button" aria-label="Go back to previous page" onclick="goBack()">Back</button>
+    <h1>The Phone Call</h1>
+
+    <div class="phone-frame">
+        <div class="phone-screen" aria-label="Phone conversation with Minh">
+            <div class="phone-status" aria-hidden="true">
+                <span>9:41</span>
+                <span>● ● ● &nbsp; 100%</span>
+            </div>
+            <div class="phone-contact">Minh · My Son</div>
+
+            <div id="phoneIntro">
+                <p>The phone keeps ringing.</p>
+                <p> Lan needs to answer it. Someone might need her.</p>
+                <button onclick="startPhoneCall()">Answer the phone</button>
+            </div>
+
+            <div id="phoneConversation" style="display: none;">
+                <p class="phone-dialogue grandma-message">
+                    <strong>Grandma</strong> Hello?
+                </p>
+                <p class="phone-dialogue minh-message">
+                    <strong>Minh</strong> Hi, Mom. It's me, Minh.
+                </p>
+
+                <p class="phone-dialogue grandma-message">
+                    <strong>Grandma</strong> Minh! My son. How are you, my boy?
+                </p>
+
+                <p class="phone-dialogue minh-message">
+                    <strong>Minh</strong> I'm fine, Mom. I'm just calling to check on you first.
+                </p>
+
+                <p class="phone-dialogue minh-message">
+                    <strong>Minh</strong> Is Bao there yet? He said he was going to visit you first.
+                </p>
+
+                <p class="phone-dialogue grandma-message">
+                    <strong>Grandma</strong> Bao?
+                </p>
+
+                <p class="phone-dialogue grandma-message">
+                    <strong>Grandma</strong> Who is Bao? I saw this name on a piece of note.
+                </p>
+
+                <p class="phone-dialogue minh-message">
+                    <strong>Minh</strong> Mom... Bao is your grandson. You love him so much.
+                </p>
+
+                <p class="phone-dialogue grandma-message">
+                    <strong>Grandma</strong> My grandson?
+                </p>
+
+                <p class="phone-dialogue minh-message">
+                    <strong>Minh</strong> Yes, Mom. We've talked about him before.
+                </p>
+
+                <p class="phone-dialogue minh-message">
+                    <strong>Minh</strong> Mom, do you remember what the doctor told us? Bao was with us too.
+                </p>
+
+                <p class="phone-dialogue grandma-message">
+                    <strong>Grandma</strong> The doctor?
+                </p>
+
+                <p class="phone-dialogue minh-message">
+                    <strong>Minh</strong> You have Alzheimer's, Mom. It's been making it harder for you to remember things, even the people you love.
+                </p>
+
+                <p class="phone-dialogue minh-message">
+                    <strong>Minh</strong> I know it's confusing. Sometimes you remember everything, and sometimes things just slip away, including the people you love.
+                </p>
+
+                <p class="phone-dialogue grandma-message">
+                    <strong>Grandma</strong> Oh...
+                </p>
+
+                <p class="phone-dialogue grandma-message">
+                    <strong>Grandma</strong> I'm sorry, Minh. I don't know why I can't remember.
+                </p>
+
+                <p class="phone-dialogue minh-message">
+                    <strong>Minh</strong> It's not your fault, Mom. You don't have to apologize.
+                </p>
+
+                <p class="phone-dialogue minh-message">
+                    <strong>Minh</strong> Just... get some rest, okay? Mai and I will see you later for dinner.
+                </p>
+
+                <p class="phone-dialogue call-ended">
+                    The call ends.
+                </p>
+                <button onclick="endPhoneCall()">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="grandsonQuestion" style="display: none;">
+
+        <p class="phone-memory-text">
+            That was my son, Minh.
+        </p>
+
+        <p class="phone-memory-text">
+            He's always been a good boy.
+        </p>
+
+        <p class="phone-memory-text">
+            But he sounded upset with me.
+        </p>
+
+        <p class="phone-memory-text">
+            I wonder if I've done something wrong.
+        </p>
+
+        <p class="phone-memory-text">
+            He kept talking about someone named Bao.
+        </p>
+
+        <p class="phone-memory-text">
+            ...Bao.
+        </p>
+
+        <p class="phone-memory-text">
+            You look familiar.
+        </p>
+
+        <p class="phone-memory-text">
+            Have we met before?
+        </p>
+
+        <p class="phone-memory-text">
+            Are you my grandson?
+        </p>
+
+        <p class="phone-memory-text">
+            Are you Bao?
+        </p>
+
+        <button id="yesButton" style="display: none;"
+                onclick="window.location.href='yes.html'">
+            Yes, Grandma. I'm Bao.
+        </button>
+
+        <button id="noButton" style="display: none;"
+                onclick="window.location.href='no.html'">
+            No, I'm not.
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

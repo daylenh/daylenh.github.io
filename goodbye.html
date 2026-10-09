@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The End</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="goodbye-page">
+
+    <div class="page-number" aria-label="Page 11 of 11">Page 11 / 11</div>
+    <button class="back-button" type="button" aria-label="Go back to previous page" onclick="goBack()">Back</button>
+    <h1 class="the-end">THE END</h1>
+
+    <div id="goodbyeIntro">
+        <p>But before you leave...</p>
+        <p>There is something I want you to remember.</p>
+
+        <button onclick="startGoodbyeStory()">Continue</button>
+    </div>
+
+    <div id="goodbyeStory" style="display: none;">
+        <h2 class="goodbye-memory-text">The Plot</h2>
+
+        <p class="goodbye-memory-text">
+            Her name was Lan.
+        </p>
+
+        <p class="goodbye-memory-text">
+            She was a mother, a grandmother, and a woman who spent her life caring for her family.
+        </p>
+
+        <p class="goodbye-memory-text">
+            She remembered the warmth of her kitchen, the smell of her cooking, and the traditions of Tết.
+        </p>
+
+        <p class="goodbye-memory-text">
+            She remembered the recipes she made with love.
+        </p>
+
+        <p class="goodbye-memory-text">
+            She remembered that someone was missing.
+        </p>
+
+        <p class="goodbye-memory-text">
+            But she could no longer remember his name.
+        </p>
+
+        <p class="goodbye-memory-text">
+            Bao was her grandson. He visited her, cared for her, and left little notes to help her remember.
+        </p>
+
+        <p class="goodbye-memory-text">
+            Yet when she read his name, it belonged to a stranger.
+        </p>
+
+        <p class="goodbye-memory-text">
+            Her son Minh remembers Bao.
+        </p>
+
+        <p class="goodbye-memory-text">
+            But even he struggled when his mother could no longer recognize someone she loved.
+        </p>
+
+        <p class="goodbye-memory-text">
+            And so, Grandma Lan kept searching through the pieces of a life she could no longer fully remember.
+        </p>
+
+        <p class="goodbye-memory-text">
+            She forgot names. She forgot faces. Sometimes, she forgot the people standing right in front of her.
+        </p>
+
+        <p class="goodbye-memory-text">
+            But the love her family had for her never disappeared.
+        </p>
+
+        <h2 class="goodbye-memory-text">The Sad Truth About Alzheimer's</h2>
+
+        <p class="goodbye-memory-text">
+            Alzheimer's is a disease that slowly damages the brain, affecting memory, thinking, and everyday life.
+        </p>
+
+        <p class="goodbye-memory-text">
+            The heartbreaking truth is that someone may forget the people they love, even when those people never stop loving them.
+        </p>
+
+        <p class="goodbye-memory-text">
+            Families may have to introduce themselves again and again, share the same stories, and grieve memories that are slowly slipping away.
+        </p>
+
+        <p class="goodbye-memory-text">
+            Sometimes, a familiar face becomes a stranger.
+        </p>
+
+        <p class="goodbye-memory-text">
+            Sometimes, a name disappears.
+        </p>
+
+        <p class="goodbye-memory-text">
+            And sometimes, the person you love is still here, but the memories you shared become harder to reach.
+        </p>
+
+        <p class="goodbye-memory-text">
+            Alzheimer's can take away memories, but it does not take away a person's worth or their need for kindness, patience, and care.
+        </p>
+
+        <p class="goodbye-memory-text final-message">
+            So if Grandma forgets your name...
+        </p>
+
+        <p class="goodbye-memory-text final-message">
+            Sit with her anyway.
+        </p>
+
+        <p class="goodbye-memory-text final-message">
+            Tell her the stories again.
+        </p>
+
+        <p class="goodbye-memory-text final-message">
+            Hold her hand.
+        </p>
+
+        <p class="goodbye-memory-text final-message">
+            Because even if she cannot remember you...
+        </p>
+
+        <p class="goodbye-memory-text final-message">
+            <strong>You can still remind her that she is loved.</strong>
+        </p>
+
+        <p class="goodbye-memory-text final-message">
+            And perhaps that is what remains when memories begin to fade.
+        </p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        function startGoodbyeStory() {
+            document.getElementById("goodbyeIntro").style.display = "none";
+
+            const story = document.getElementById("goodbyeStory");
+            story.style.display = "block";
+
+            const lines = story.querySelectorAll(".goodbye-memory-text");
+
+            lines.forEach(function(line, index) {
+                setTimeout(function() {
+                    line.classList.add("show");
+                }, index * 3000);
+            });
+        }
+    </script>
+
+</body>
+</html>

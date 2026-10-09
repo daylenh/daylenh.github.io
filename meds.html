@@ -6,5 +6,119 @@
     <title>Medicine?</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-    <img src="images/meds/meds.png" alt="Medicine Bottle">
-</html> 
+
+<body class="medicine-page">
+
+    <div class="page-number" aria-label="Page 7 of 11">Page 07 / 11</div>
+    <button class="back-button" type="button" aria-label="Go back to previous page" onclick="goBack()">Back</button>
+    <h1>Medicine?</h1>
+
+    <div id="medicineStory">
+        <img id="medicineImage" src="images/meds/medicine.png" alt="A medicine bottle">
+
+        <div class="medicine-story-content">
+            <div id="medicineDescription">
+                <h2>Medicine Bottle</h2>
+
+                <p>
+                    A small bottle of medicine with a label and instructions.
+                </p>
+
+                <p>
+                    A handwritten note is tucked beside the bottle.
+                </p>
+
+                <button onclick="startMedicineStory()">Next</button>
+            </div>
+
+            <div id="medicineIntro" style="display: none;">
+                <p>Oh, this bottle.</p>
+
+                <p>My grandson gave this to me.</p>
+
+                <p>
+                    He told me that the doctors prescribed this. 
+                </p>
+
+                <p>
+                    Supposedly, it is good for my memory and that I should take it every day.
+                </p>
+
+                <p>
+                    Oh, there is a little note on the side.
+                </p>
+
+                <button onclick="showNote()">Read the note</button>
+            </div>
+
+            <div id="medicineNote" style="display: none;">
+                <div class="handwritten-note">
+                    <p>Grandma,</p>
+
+                    <p>
+                        Remember to take your medicine every day, okay?
+                        It's important that you take care of yourself.
+                    </p>
+
+                    <p>I'll come visit you often. Love you!</p>
+
+                    <p>- Bao</p>
+                </div>
+
+                <button onclick="showConfusion()">Next</button>
+            </div>
+
+            <div id="medicineConfusion" style="display: none;">
+                <p class="medicine-memory-text">...Bao?</p>
+
+                <p class="medicine-memory-text">Who's Bao?</p>
+
+                <p class="medicine-memory-text">
+                    That's the name written on this note.
+                </p>
+
+                <p class="medicine-memory-text">
+                    He sounds like a very thoughtful boy.
+                </p>
+
+                <p class="medicine-memory-text">
+                    He must care about me a lot.
+                </p>
+
+                <p class="medicine-memory-text">
+                    But why can't I remember him?
+                </p>
+
+                <p class="medicine-memory-text">
+                    Have I met him before?
+                </p>
+
+                <div id="phoneRinging" style="display: none;">
+                    <p class="phone-memory-text">*Ring... Ring...*</p>
+
+                    <p class="phone-memory-text">
+                        What is that sound?
+                    </p>
+
+                    <p class="phone-memory-text">
+                        ...Is that the phone ringing?
+                    </p>
+
+                    <p class="phone-memory-text">
+                        Who is that?
+                    </p>
+                </div>
+
+                <button id="medicineNextButton"
+                        onclick="goToPhone()"
+                        style="display: none;">
+                    Answer the phone
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
