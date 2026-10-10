@@ -529,14 +529,10 @@ button.back-button:hover {
     gap: 18px;
 }
 
-
-
 .family-card-wrap {
     min-width: 0;
 
 }
-
-
 
 .family-card {
     display: flex;
@@ -558,14 +554,10 @@ button.back-button:hover {
     text-align: center;
 }
 
-
-
 .family-card:hover:not(:disabled) {
     color: var(--clay-deep);
     background-color: var(--paper);
 }
-
-
 
 .family-card:disabled {
     border-style: dashed;
@@ -576,7 +568,6 @@ button.back-button:hover {
     opacity: 0.7;
 }
 
-/* Fade out all flashcard text when Bao's memory begins */
 .family-cards.memory-started .family-card {
     color: #887d70;
     border-color: rgba(136, 125, 112, 0.3);

@@ -111,7 +111,6 @@ function toggleFamilyCard(name) {
     }
 }
 
-// Function to start Bao's memory sequence
 function startBaoMemory() {
     const details = document.getElementById("baoDetails");
     const memory = document.getElementById("baoMemory");
@@ -159,7 +158,6 @@ function startBaoMemory() {
     }, text.length * 2500 + 2000);
 }
 
-// Function to forget Bao's memory sequence
 function forgetBao() {
     const cardsContainer = document.getElementById("familyCards");
     const prompt = document.getElementById("familyPrompt");
@@ -184,9 +182,7 @@ function forgetBao() {
     }, 2000);
 }
 
-
 const openedKitchenMemories = new Set();
-
 function setMemoryVisibility(id, isVisible) {
     const memory = document.getElementById(id);
     const hotspot = document.querySelector('[aria-controls="' + id + '"]');
@@ -408,19 +404,16 @@ function goToDining() {
     window.location.href = "dining.html";
 }
 
-// Move from the medicine description to Grandma's monologue
 function startMedicineStory() {
     document.getElementById("medicineDescription").style.display = "none";
     document.getElementById("medicineIntro").style.display = "block";
 }
 
-// Show the handwritten note
 function showNote() {
     document.getElementById("medicineIntro").style.display = "none";
     document.getElementById("medicineNote").style.display = "block";
 }
 
-// Show Grandma's confusion
 function showConfusion() {
     document.getElementById("medicineNote").style.display = "none";
     const confusion = document.getElementById("medicineConfusion");
