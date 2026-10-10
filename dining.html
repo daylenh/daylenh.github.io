@@ -15,19 +15,19 @@
 
         <button class="hotspot dining-hotspot book" type="button"
             aria-label="Open the book and read the poem about missing and remembering Bao"
-            aria-controls="bookMemory"
+            aria-controls="bookMemory" aria-expanded="false"
             onclick="showDiningMemory('bookMemory', this)">
         </button>
 
         <button class="hotspot dining-hotspot toys" type="button"
             aria-label="Remember the toys on the shelf"
-            aria-controls="toysMemory"
+            aria-controls="toysMemory" aria-expanded="false"
             onclick="showDiningMemory('toysMemory', this)">
         </button>
 
         <button class="hotspot dining-hotspot rainbow-stick" type="button"
             aria-label="Remember the rainbow stick"
-            aria-controls="rainbowStickMemory"
+            aria-controls="rainbowStickMemory" aria-expanded="false"
             onclick="showDiningMemory('rainbowStickMemory', this)">
         </button>
 
@@ -36,7 +36,8 @@
             onclick="openMeds()" disabled>
         </button>
 
-        <div id="bookMemory" class="memory dining-memory book-memory" role="status" aria-live="polite">
+        <div id="bookMemory" class="memory dining-memory book-memory" role="status" aria-live="polite"
+            onclick="toggleMemoryCard(event, 'bookMemory')">
             <h2>The Book</h2>
             <p>
                 A poem from my grandson. It is a beautiful poem that reminds me 
@@ -45,12 +46,14 @@
             <button type="button" onclick="openPoem()">Read the poem</button>
         </div>
 
-        <div id="toysMemory" class="memory dining-memory toys-memory" role="status" aria-live="polite">
+        <div id="toysMemory" class="memory dining-memory toys-memory" role="status" aria-live="polite"
+            onclick="toggleMemoryCard(event, 'toysMemory')">
             <h2>The Toys</h2>
             <p>Toys left by my grandson. Oh, how I remember how he used to play with them!</p>
         </div>
 
-        <div id="rainbowStickMemory" class="memory dining-memory rainbow-stick-memory" role="status" aria-live="polite">
+        <div id="rainbowStickMemory" class="memory dining-memory rainbow-stick-memory" role="status" aria-live="polite"
+            onclick="toggleMemoryCard(event, 'rainbowStickMemory')">
             <h2>The Rainbow Stick</h2>
             <p>A colorful dust cleaner that I used to discipline my kids.</p>
         </div>

@@ -15,7 +15,7 @@
         <div class="kitchen">
             <img src="images/kitchen/kitchen.jpg" alt="Lan's Kitchen">
             <button class="hotspot pan" type="button" aria-label="Remember the black pan on the stove"
-                aria-controls="panMemory" data-memory="panMemory"
+                aria-controls="panMemory" aria-expanded="false" data-memory="panMemory"
                 onclick="showMemory('panMemory', this)">
             </button>
 
@@ -24,28 +24,31 @@
             </button>
 
             <button class="hotspot sink" type="button" aria-label="Remember the sink"
-                aria-controls="sinkMemory" data-memory="sinkMemory"
+                aria-controls="sinkMemory" aria-expanded="false" data-memory="sinkMemory"
                 onclick="showMemory('sinkMemory', this)">
             </button>
             
             <button class="hotspot sauce" type="button" aria-label="Remember the sauce bottle"
-                aria-controls="sauceMemory" data-memory="sauceMemory"
+                aria-controls="sauceMemory" aria-expanded="false" data-memory="sauceMemory"
                 onclick="showMemory('sauceMemory', this)">
             </button>
 
-            <div id="panMemory" class="memory pan-memory" role="status" aria-live="polite">
+            <div id="panMemory" class="memory pan-memory" role="status" aria-live="polite"
+                onclick="toggleMemoryCard(event, 'panMemory')">
                 <h2>The Pan</h2>
                 <p>
                     This is my pan. I use this every day. I remember my grandson burning his hand on it. Poor kid.
                 </p>
             </div>
 
-            <div id="sinkMemory" class="memory sink-memory" role="status" aria-live="polite">
+            <div id="sinkMemory" class="memory sink-memory" role="status" aria-live="polite"
+                onclick="toggleMemoryCard(event, 'sinkMemory')">
                 <h2>The Sink</h2>
                 <p>This is a sink. I remember when my grandson left it on and flooded the kitchen. Good times!</p>
             </div>
 
-            <div id="sauceMemory" class="memory sauce-memory" role="status" aria-live="polite">
+            <div id="sauceMemory" class="memory sauce-memory" role="status" aria-live="polite"
+                onclick="toggleMemoryCard(event, 'sauceMemory')">
                 <h2>The Sauce</h2>
                 <p>This is my secret sauce that makes anything taste better.</p>
             </div>

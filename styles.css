@@ -188,6 +188,7 @@
     border: 1px solid rgba(88, 58, 27, 0.5);
     border-radius: 6px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
 }
 
 .memory h2 {

@@ -187,15 +187,41 @@ function forgetBao() {
 
 const openedKitchenMemories = new Set();
 
-function showMemory(id, hotspot) {
+function setMemoryVisibility(id, isVisible) {
     const memory = document.getElementById(id);
-    if (!memory || !hotspot || openedKitchenMemories.has(id)) {
+    const hotspot = document.querySelector('[aria-controls="' + id + '"]');
+    if (!memory) {
         return;
     }
 
-    memory.classList.add("is-visible");
-    openedKitchenMemories.add(id);
-    hotspot.remove();
+    memory.classList.toggle("is-visible", isVisible);
+    if (hotspot) {
+        hotspot.setAttribute("aria-expanded", String(isVisible));
+    }
+}
+
+function toggleMemoryCard(event, id) {
+    if (event.target.closest("button")) {
+        return;
+    }
+
+    const memory = document.getElementById(id);
+    if (memory) {
+        setMemoryVisibility(id, !memory.classList.contains("is-visible"));
+    }
+}
+
+function showMemory(id, hotspot) {
+    const memory = document.getElementById(id);
+    if (!memory || !hotspot) {
+        return;
+    }
+
+    const isVisible = !memory.classList.contains("is-visible");
+    setMemoryVisibility(id, isVisible);
+    if (isVisible) {
+        openedKitchenMemories.add(id);
+    }
 
     if (openedKitchenMemories.size === 3) {
         const recipeHotspot = document.querySelector(".hotspot.recipe");
@@ -249,14 +275,7 @@ const diningPage = document.querySelector("body.dining-page");
 if (diningPage) {
     diningMemoryIds.forEach(function(id) {
         if (openedDiningMemories.has(id)) {
-            const memory = document.getElementById(id);
-            const hotspot = document.querySelector('[aria-controls="' + id + '"]');
-            if (memory) {
-                memory.classList.add("is-visible");
-            }
-            if (hotspot) {
-                hotspot.remove();
-            }
+            setMemoryVisibility(id, false);
         }
     });
     updateDiningProgress();
@@ -264,14 +283,16 @@ if (diningPage) {
 
 function showDiningMemory(id, hotspot) {
     const memory = document.getElementById(id);
-    if (!memory || !hotspot || !diningMemoryIds.includes(id) || openedDiningMemories.has(id)) {
+    if (!memory || !hotspot || !diningMemoryIds.includes(id)) {
         return;
     }
 
-    memory.classList.add("is-visible");
-    openedDiningMemories.add(id);
-    sessionStorage.setItem(diningMemoriesStorageKey, JSON.stringify(Array.from(openedDiningMemories)));
-    hotspot.remove();
+    const isVisible = !memory.classList.contains("is-visible");
+    setMemoryVisibility(id, isVisible);
+    if (isVisible && !openedDiningMemories.has(id)) {
+        openedDiningMemories.add(id);
+        sessionStorage.setItem(diningMemoriesStorageKey, JSON.stringify(Array.from(openedDiningMemories)));
+    }
     updateDiningProgress();
 }
 
