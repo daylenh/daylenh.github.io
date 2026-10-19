@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Kitchen</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="kitchen-page">
+        <div class="page-number" aria-label="Page 3 of 11">Page 03 / 11</div>
+        <button class="back-button" type="button" aria-label="Go back to previous page" onclick="goBack()">Back</button>
+        <h1>Welcome to my kitchen</h1>
+
+        <div class="kitchen">
+            <img src="images/kitchen/kitchen.jpg" alt="Lan's Kitchen">
+            <button class="hotspot pan" type="button" aria-label="Remember the black pan on the stove"
+                aria-controls="panMemory" aria-expanded="false" data-memory="panMemory"
+                onclick="showMemory('panMemory', this)">
+            </button>
+
+            <button class="hotspot recipe" type="button" aria-label="The recipe is locked until the pan, sink, and sauce memories are opened"
+                onclick="openRecipe()" disabled>
+            </button>
+
+            <button class="hotspot sink" type="button" aria-label="Remember the sink"
+                aria-controls="sinkMemory" aria-expanded="false" data-memory="sinkMemory"
+                onclick="showMemory('sinkMemory', this)">
+            </button>
+            
+            <button class="hotspot sauce" type="button" aria-label="Remember the sauce bottle"
+                aria-controls="sauceMemory" aria-expanded="false" data-memory="sauceMemory"
+                onclick="showMemory('sauceMemory', this)">
+            </button>
+
+            <div id="panMemory" class="memory pan-memory" role="status" aria-live="polite"
+                onclick="toggleMemoryCard(event, 'panMemory')">
+                <h2>The Pan</h2>
+                <p>
+                    This is my pan. I use this every day. I remember my grandson burning his hand on it. Poor kid.
+                </p>
+            </div>
+
+            <div id="sinkMemory" class="memory sink-memory" role="status" aria-live="polite"
+                onclick="toggleMemoryCard(event, 'sinkMemory')">
+                <h2>The Sink</h2>
+                <p>This is a sink. I remember when my grandson left it on and flooded the kitchen. Good times!</p>
+            </div>
+
+            <div id="sauceMemory" class="memory sauce-memory" role="status" aria-live="polite"
+                onclick="toggleMemoryCard(event, 'sauceMemory')">
+                <h2>The Sauce</h2>
+                <p>This is my secret sauce that makes anything taste better.</p>
+            </div>
+        </div>
+
+        <p id="recipePrompt" class="recipe-prompt" aria-live="polite">
+            Explore the pan, sink, and sauce to uncover the recipe.
+        </p>
+
+        <script src="script.js"></script>
+    </body>
+</html>

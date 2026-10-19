@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yes, Grandma</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="yes-page">
+
+    <div class="page-number" aria-label="Page 9 of 11">Page 09 / 11</div>
+    <button class="back-button" type="button" aria-label="Go back to previous page" onclick="goBack()">Back</button>
+    <h1>Yes, Grandma.</h1>
+
+    <div id="yesIntro">
+        <p class="yes-intro-text">You're Bao?</p>
+        <p class="yes-intro-text">Oh...</p>
+        <p class="yes-intro-text">Come here, let me look at you.</p>
+
+        <button onclick="startYesMemory()">Next</button>
+    </div>
+
+    <div id="yesMemory" style="display: none;">
+
+        <p class="ending-memory-text">
+            I knew there was something familiar about you.
+        </p>
+
+        <p class="ending-memory-text">
+            Your eyes...
+        </p>
+
+        <p class="ending-memory-text">
+            I feel like I've seen them a thousand times before.
+        </p>
+
+        <p class="ending-memory-text">
+            Did I watch you grow up?
+        </p>
+
+        <p class="ending-memory-text">
+            Did I hold your little hand when you were small?
+        </p>
+
+        <p class="ending-memory-text">
+            I'm sorry, con.
+        </p>
+
+        <p class="ending-memory-text">
+            I can't remember everything.
+        </p>
+
+        <p class="ending-memory-text">
+            But when I look at you, my heart feels warm.
+        </p>
+
+        <p class="ending-memory-text">
+            That must mean you're someone very special to me.
+        </p>
+
+        <p class="ending-memory-text">
+            You know...
+        </p>
+
+        <p class="ending-memory-text">
+            I love you, con, even if I can't remember everything.
+        </p>
+
+        <button id="yesNextButton" style="display: none;"
+                onclick="window.location.href='goodbye.html'">
+            The End
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
