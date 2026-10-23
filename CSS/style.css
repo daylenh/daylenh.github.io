@@ -1,0 +1,336 @@
+/* General page styling */
+body {
+    background-color: #f8f9fc;
+    color: #212529;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation bar */
+.navbar {
+    background-color: #171923;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: #d1d5db !important;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #a78bfa !important;
+}
+
+/* Hero section */
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #171923, #37306b, #7456b8);
+    color: white;
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+}
+
+.hero p {
+    color: #e0ddf5;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.accent {
+    color: #c4b5fd;
+}
+
+/* Buttons */
+.btn-custom {
+    background-color: #c4b5fd;
+    color: #171923;
+    border: none;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 30px;
+}
+
+.btn-custom:hover {
+    background-color: white;
+    color: #171923;
+}
+
+/* Project cards */
+.project-card {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.project-icon {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    background: linear-gradient(135deg, #e9e3ff, #dbeafe);
+}
+
+/* Card content */
+.project-card .card-body {
+    padding: 24px;
+}
+
+.project-card .card-title {
+    font-weight: bold;
+}
+
+.project-link {
+    color: #6d4acb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    color: #3d2780;
+}
+
+/* About section */
+.about-section {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+/* Net Art image gallery */
+.netart-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.netart-image-link {
+    display: block;
+    overflow: hidden;
+}
+
+.netart-image-link:hover .netart-image {
+    transform: scale(1.04);
+}
+
+.netart-card {
+    height: 100%;
+}
+
+.netart-card .card-body {
+    padding: 1.5rem;
+}
+
+
+/* Minecraft Artwork */
+.minecraft-artwork-container {
+    width: 100%;
+}
+
+.minecraft-artwork {
+    width: auto;
+    max-width: 100%;
+    max-height: 750px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.minecraft-artwork:hover {
+    transform: scale(1.02);
+}
+
+/* Meme Mashup Artwork */
+.mashup-artwork-container {
+    width: 100%;
+}
+
+.mashup-artwork {
+    width: auto;
+    max-width: 100%;
+    max-height: 750px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.mashup-artwork:hover {
+    transform: scale(1.02);
+}
+
+/* Homepage Project Images */
+.project-image-link {
+    display: block;
+    overflow: hidden;
+    background-color: #f1f0f8;
+}
+
+.project-image {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-image-link:hover .project-image {
+    transform: scale(1.04);
+}
+
+#projects .project-card {
+    height: 100%;
+}
+
+#projects .project-card .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#projects .project-card .card-text {
+    flex-grow: 1;
+}
+
+#projects .project-card .project-link {
+    margin-top: 1rem;
+}
+
+/* Glitch Art Gallery */
+.glitch-artwork-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background-color: #f1f1f5;
+}
+
+.glitch-artwork {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.glitch-artwork:hover {
+    transform: scale(1.03);
+}
+
+.glitch-artwork-container + .card-body {
+    padding: 1.5rem;
+}
+
+.project-card {
+    height: 100%;
+}
+
+/* 3D Artwork Gallery */
+.three-d-artwork-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background-color: #f1f1f5;
+}
+
+.three-d-artwork {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.three-d-artwork:hover {
+    transform: scale(1.03);
+}
+
+.three-d-artwork-container + .card-body {
+    padding: 1.5rem;
+}
+
+.project-card {
+    height: 100%;
+}
+
+/* About Me */
+.about-profile-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 350px;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: #f1f0f8;
+}
+
+.about-profile-placeholder {
+    text-align: center;
+    color: #55516b;
+}
+
+.about-profile-placeholder span {
+    display: block;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.about-profile-placeholder p {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.about-interests-section {
+    background-color: #f8f7fb;
+}
+
+.about-interest-card {
+    height: 100%;
+    border: none;
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-interest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08) !important;
+}
+
+.about-interest-card .card-body {
+    padding: 2rem;
+}
+
+.about-interest-icon {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.about-profile-photo {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: 350px;
+    object-fit: contain;
+    border-radius: 1rem;
+}
