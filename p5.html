@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js Selfie | Dayven's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                PORTFOLIO<span class="accent">.</span>
+            </a>
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mashup.html">Mashup</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="glitch.html">Glitch Art</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="netart.html">Net Art</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="minecraft.html">Minecraft</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="3d.html">3D Printing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="p5.html">p5.js Selfie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <p class="text-uppercase fw-bold mb-3 hero-label">
+                Creative Coding • Digital Art
+            </p>
+            <h1 class="hero-title">
+                p5.js <span class="accent">Self-Portrait.</span>
+            </h1>
+            <p class="hero-description">
+                Turning lines, shapes, and code into a self-portrait.
+            </p>
+            <div class="hero-shapes">
+                <span class="shape-circle"></span>
+                <span class="shape-square"></span>
+                <span class="shape-outline"></span>
+            </div>
+            <div class="hero-footer">
+                <span>JAVASCRIPT × CREATIVITY</span>
+                <span>SCROLL TO EXPLORE ↓</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portrait Preview -->
+    <section class="py-5">
+        <div class="container py-3">
+            <div class="text-center mb-5">
+                <p class="text-uppercase fw-bold text-secondary mb-2">
+                    Featured Project
+                </p>
+                <h2 class="display-6 fw-bold">
+                    My Digital Self-Portrait
+                </h2>
+                <p class="text-secondary">
+                    A portrait created using JavaScript and p5.js.
+                </p>
+            </div>
+            <div class="p5-artwork-container">
+                <iframe
+                    src="p5/index.html"
+                    title="My p5.js self-portrait"
+                    class="p5-artwork artwork-iframe"
+                    scrolling="no">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Description -->
+    <section class="py-5">
+        <div class="container">
+            <div class="about-section shadow-sm">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-4">
+                        <p class="text-uppercase fw-bold text-secondary mb-2">
+                            About the Project
+                        </p>
+                        <h2 class="display-6 fw-bold">
+                            Creating Art<br>
+                            Through Code.
+                        </h2>
+                    </div>
+                    <div class="col-lg-8">
+                        <p class="text-secondary fs-5">
+                            For this project, I used p5.js to create a self-portrait
+                            based on a reference photo. I tried to recreate my appearance
+                            using different shapes, lines, curves, and colors. I also made sure to include
+                            the background, face, hair, clothing, and hands.
+                        </p>
+                        <p class="text-secondary fs-5 mb-0">
+                            This project reminded me of a similar experience
+                            in my object-oriented design (CS 151) course, where
+                            I used Java functions to generate art. It was cool to combine
+                            both technology and art. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Source Code -->
+    <section class="py-5">
+        <div class="container py-3">
+            <div class="text-center mb-5">
+                <p class="text-uppercase fw-bold text-secondary mb-2">
+                    Behind the Scenes
+                </p>
+                <h2 class="display-6 fw-bold">
+                    Source Code
+                </h2>
+                <p class="text-secondary">
+                    Explore the code behind my self-portrait.
+                </p>
+            </div>
+            <div class="p5-source-container">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-secondary fw-bold">
+                        p5.js - JavaScript
+                    </span>
+                    <button class="btn btn-custom btn-sm"
+                            onclick="copyP5Code()">
+                        Copy Code
+                    </button>
+                </div>
+                <div class="p5-code-container">
+                    <pre><code id="p5SourceCode">
+                        function setup() {
+                        createCanvas(600, 600);
+                        noLoop();
+                        }
+
+                        function draw() {
+                        // Sky
+                        background(155, 170, 180);
+
+                        // Sunset
+                        noStroke();
+                        fill(230, 175, 145);
+                        rect(0, 280, 600, 100);
+
+                        // Distant hills
+                        fill(75, 68, 72);
+                        beginShape();
+                        vertex(0, 310);
+                        vertex(100, 285);
+                        vertex(180, 305);
+                        vertex(300, 280);
+                        vertex(420, 300);
+                        vertex(520, 285);
+                        vertex(600, 305);
+                        vertex(600, 360);
+                        vertex(0, 360);
+                        endShape(CLOSE);
+
+                        // Ocean
+                        fill(100, 140, 155);
+                        rect(0, 340, 600, 18);
+
+                        // Beach
+                        fill(180, 140, 110);
+                        rect(0, 358, 600, 242);
+
+                        // Back hair
+                        fill(35, 29, 30);
+                        beginShape();
+                        vertex(238, 215);
+                        bezierVertex(220, 175, 225, 125, 265, 112);
+                        bezierVertex(285, 95, 315, 95, 340, 112);
+                        bezierVertex(380, 125, 380, 175, 362, 215);
+                        bezierVertex(365, 245, 345, 260, 325, 255);
+                        bezierVertex(310, 265, 290, 265, 275, 255);
+                        bezierVertex(255, 260, 235, 245, 238, 215);
+                        endShape(CLOSE);
+
+                        // Neck
+                        noStroke();
+                        fill(230, 170, 135);
+                        rect(280, 270, 40, 55);
+
+                        // Face
+                        fill(240, 185, 145);
+                        ellipse(300, 215, 125, 155);
+
+                        // Left side hair (sideburns)
+                        fill(35, 29, 30);
+                        beginShape();
+                        vertex(240, 155);
+                        bezierVertex(230, 180, 235, 200, 245, 215);
+                        bezierVertex(250, 220, 255, 215, 257, 205);
+                        bezierVertex(250, 190, 250, 170, 265, 155);
+                        endShape(CLOSE);
+
+                        // Right side hair (sideburns)
+                        beginShape();
+                        vertex(360, 155);
+                        bezierVertex(370, 180, 365, 200, 355, 215);
+                        bezierVertex(350, 220, 345, 215, 343, 205);
+                        bezierVertex(350, 190, 350, 170, 335, 155);
+                        endShape(CLOSE);
+
+                        // Left middle parted hair
+                        fill(35, 29, 30);
+                        beginShape();
+                        vertex(300, 112);
+                        bezierVertex(275, 95, 245, 110, 235, 145);
+                        bezierVertex(225, 175, 245, 195, 265, 200);
+                        bezierVertex(258, 180, 265, 155, 285, 145);
+                        bezierVertex(290, 135, 295, 122, 300, 112);
+                        endShape(CLOSE);
+
+                        // Right middle parted hair
+                        beginShape();
+                        vertex(300, 112);
+                        bezierVertex(325, 95, 355, 110, 365, 145);
+                        bezierVertex(375, 175, 355, 195, 335, 200);
+                        bezierVertex(342, 180, 335, 155, 315, 145);
+                        bezierVertex(310, 135, 305, 122, 300, 112);
+                        endShape(CLOSE);
+
+                        // Left hair layers
+                        bezier(270, 115, 240, 125, 235, 155, 255, 180);
+                        bezier(285, 120, 260, 135, 255, 160, 265, 185);
+
+                        // Right hair layers
+                        bezier(330, 115, 360, 125, 365, 155, 345, 180);
+                        bezier(315, 120, 340, 135, 345, 160, 335, 185);
+
+                        // Middle part detail
+                        stroke(85, 65, 55);
+                        strokeWeight(2);
+                        line(300, 112, 300, 135);
+
+                        // Ears
+                        noStroke();
+                        fill(240, 185, 145);
+                        ellipse(237, 220, 20, 30);
+                        ellipse(363, 220, 20, 30);
+
+                        // Eyebrows
+                        stroke(55, 35, 30);
+                        strokeWeight(5);
+                        line(255, 195, 280, 192);
+                        line(320, 192, 345, 195);
+
+                        // Eyes
+                        noStroke();
+                        fill(255);
+                        ellipse(270, 207, 25, 14);
+                        ellipse(330, 207, 25, 14);
+
+                        fill(45, 35, 30);
+                        ellipse(272, 207, 10, 12);
+                        ellipse(328, 207, 10, 12);
+
+                        // Nose
+                        stroke(190, 120, 100);
+                        strokeWeight(2);
+                        line(300, 215, 295, 235);
+                        line(295, 235, 305, 237);
+
+                        // Smile
+                        noFill();
+                        stroke(145, 65, 65);
+                        strokeWeight(3);
+                        arc(300, 240, 45, 25, 0, PI);
+
+                        // Sweatshirt
+                        noStroke();
+                        fill(45, 43, 58);
+                        beginShape();
+                        vertex(280, 300);
+                        vertex(250, 315);
+                        vertex(200, 340);
+                        vertex(170, 410);
+                        vertex(205, 450);
+                        vertex(230, 420);
+                        vertex(220, 600);
+                        vertex(380, 600);
+                        vertex(370, 420);
+                        vertex(395, 450);
+                        vertex(430, 410);
+                        vertex(400, 340);
+                        vertex(350, 315);
+                        vertex(320, 300);
+                        endShape(CLOSE);
+
+                        // Sleeves
+                        fill(55, 52, 68);
+                        quad(205, 345, 245, 355, 215, 470, 180, 440);
+                        quad(395, 345, 355, 355, 385, 470, 420, 440);
+
+                        // Left hand
+                        noStroke();
+                        fill(240, 185, 145);
+                        ellipse(230, 390, 38, 48);
+
+                        // Left peace sign fingers
+                        stroke(240, 185, 145);
+                        strokeWeight(13);
+                        strokeCap(ROUND);
+                        line(220, 385, 205, 345);
+                        line(240, 385, 255, 350);
+
+                        // Right hand
+                        noStroke();
+                        fill(240, 185, 145);
+                        ellipse(370, 390, 38, 48);
+
+                        // Right peace sign fingers
+                        stroke(240, 185, 145);
+                        strokeWeight(13);
+                        strokeCap(ROUND);
+                        line(380, 385, 395, 345);
+                        line(360, 385, 345, 350);
+                        }</code></pre>
+                </div>
+                <p class="text-secondary small mt-3 mb-0">
+                    Scroll through the code or use the Copy Code button to view it.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="pb-5">
+        <div class="container">
+            <div class="text-center">
+                <a href="index.html" class="btn btn-custom">
+                    &larr; Back to Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+    <script>
+        function copyP5Code() {
+            const code = document.getElementById("p5SourceCode").textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                alert("Code copied!");
+            }).catch(() => {
+                alert("Unable to copy code. Please select and copy it manually.");
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
