@@ -361,24 +361,38 @@ body {
     border-radius: 1rem;
 }
 
+/* p5.js Artwork */
 .p5-artwork-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: fit-content;
-    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
     padding: 2rem;
     background-color: #f1f0f8;
     border-radius: 2rem;
+    overflow: hidden;
 }
 
 .p5-artwork {
     display: block;
     width: 600px;
     height: 600px;
-    max-width: 100%;
     border: none;
+    margin: 0 auto;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .p5-artwork-container {
+        padding: 1rem;
+    }
+
+    .p5-artwork {
+        width: 600px;
+        height: 600px;
+        flex-shrink: 0;
+    }
 }
 
 /* Source Code Section */
@@ -492,11 +506,23 @@ body {
     }
 }
 
-/* iFrame Hover effect */
-.p5-artwork {
-    transition: transform 0.3s ease;
+/* Mobile Navbar */
+@media (max-width: 991px) {
+    .navbar-nav {
+        align-items: flex-start;
+    }
+
+    .nav-link::after {
+        left: 0;
+        transform: none;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        width: 100%;
+    }
 }
 
-.p5-artwork:hover {
-    transform: scale(1.03);
+img[src="images/3d.png"] {
+    object-position: center 40%;
 }
