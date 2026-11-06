@@ -316,18 +316,18 @@ function saveme(){
 }
 
 function keyPressed() {
-    if ("1234567890".includes(key)) {
-      toolChoice = key;
-      selectedTool = key;
+  if ("1234567890".includes(key)) {
+    toolChoice = key;
+    selectedTool = key;
 
-      window.parent.document.getElementById("selectedTool").textContent = key + " - " + getToolName(key);
-    }
-    if (key == 'x' || key == 'X') {
-      toolChoice = '';
-      selectedTool = "None";
-      window.parent.document.getElementById("selectedTool").textContent = "None";
-      background(screenbg);
-    }
+    window.parent.document.getElementById("selectedTool").textContent = key + " - " + getToolName(key);
+  }
+  if (key == 'x' || key == 'X') {
+    toolChoice = '';
+    selectedTool = "None";
+    window.parent.document.getElementById("selectedTool").textContent = "None";
+    background(screenbg);
+  }
 }
 
 function getToolName(tool) {
