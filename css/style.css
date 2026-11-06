@@ -526,3 +526,12 @@ body {
 img[src="images/3d.png"] {
     object-position: center 40%;
 }
+
+#selectedTool {
+    display: inline-block;
+    background: #343a40;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 8px;
+    min-width: 180px;
+}
