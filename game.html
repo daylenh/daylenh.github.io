@@ -1,0 +1,630 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Hunter | Dayven's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                PORTFOLIO<span class="accent">.</span>
+            </a>
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mashup.html">Mashup</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="glitch.html">Glitch Art</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="netart.html">Net Art</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="minecraft.html">Minecraft</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="3d.html">3D Printing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="p5.html">p5.js Selfie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="diy.html">DIY Photoshop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="game.html">Game</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <p class="text-uppercase fw-bold mb-3 hero-label">
+                Game Design • Creative Coding
+            </p>
+            <h1 class="hero-title">
+                Ball <span class="accent">Hunter.</span>
+            </h1>
+            <p class="hero-description">
+                An arcade game about catching moving targets, earning points, and beating the clock.
+            </p>
+            <div class="hero-shapes">
+                <span class="shape-circle"></span>
+                <span class="shape-square"></span>
+                <span class="shape-outline"></span>
+            </div>
+            <div class="hero-footer">
+                <span>JAVASCRIPT × DIGITAL ART</span>
+                <span>SCROLL TO EXPLORE ↓</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ball Hunter Game Preview -->
+    <section class="py-5">
+        <div class="container py-3">
+            <div class="text-center mb-5">
+                <p class="text-uppercase fw-bold text-secondary mb-2">
+                    Featured Project
+                </p>
+                <h2 class="display-6 fw-bold">
+                    Ball Hunter
+                </h2>
+                <p class="text-secondary">
+                    An interactive arcade game built with JavaScript and p5.js.
+                </p>
+            </div>
+            <div class="row align-items-center g-5">
+                <!-- Game Canvas -->
+                <div class="col-lg-8">
+                    <div class="p5-artwork-container">
+                        <iframe
+                            src="game/index.html"
+                            title="Ball Hunter Game"
+                            class="p5-artwork artwork-iframe"
+                            scrolling="no">
+                        </iframe>
+                    </div>
+                    <div class="text-center mt-3">
+                        <p class="text-secondary mb-1">Game Objective</p>
+                        <h4 class="fw-bold">Reach 30 points before time runs out!</h4>
+                    </div>
+                </div>
+                <!-- Instructions -->
+                <div class="col-lg-4">
+                    <div class="about-section shadow-sm">
+                        <p class="text-uppercase fw-bold text-secondary mb-2">
+                            How to Play
+                        </p>
+                        <h3 class="fw-bold mb-3">
+                            Game Instructions
+                        </h3>
+                        <p class="text-secondary">
+                            Move your mouse over the moving yellow ball to catch it
+                            and earn points. You have 30 seconds to reach 30 points.
+                        </p>
+                        <hr>
+                        <h5 class="fw-bold">Scoring</h5>
+                        <div class="text-secondary">
+                            <p><strong>Yellow Ball</strong> – 1 point</p>
+                            <p><strong>Red Bonus Star</strong> – 3 points</p>
+                            <p><strong>Combo</strong> – Catch balls within 2 seconds to build your combo.</p>
+                        </div>
+                        <hr>
+                        <h5 class="fw-bold">Levels</h5>
+                        <div class="text-secondary">
+                            <p><strong>Level 1</strong> – 0–9 points</p>
+                            <p><strong>Level 2</strong> – 10–19 points; the ball moves faster and gets smaller.</p>
+                            <p><strong>Level 3</strong> – 20–30 points; the ball becomes even faster and smaller.</p>
+                        </div>
+                        <hr>
+                        <h5 class="fw-bold">Controls</h5>
+                        <p class="text-secondary mb-2">
+                            <strong>Mouse</strong> – Move over the yellow ball or red star to catch it.
+                        </p>
+                        <p class="text-secondary mb-2">
+                            <strong>SPACE</strong> – Start the game.
+                        </p>
+                        <p class="text-secondary mb-0">
+                            <strong>R</strong> – Restart the game. You can also click the screen on the start or end screen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Description -->
+    <section class="py-5">
+        <div class="container">
+            <div class="about-section shadow-sm">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-4">
+                        <p class="text-uppercase fw-bold text-secondary mb-2">
+                            About the Project
+                        </p>
+                        <h2 class="display-6 fw-bold">
+                            An Arcade Game<br>
+                            Built with Code.
+                        </h2>
+                    </div>
+                    <div class="col-lg-8">
+                        <p class="text-secondary fs-5">
+                            For this project, I created Ball Hunter, an arcade game
+                            using JavaScript and p5.js. The goal is to catch a moving yellow
+                            ball with the mouse and earn 30 points before the 30 second timer
+                            runs out. Players can also catch red bonus stars for extra points.
+                            This game was actually improved from a game tutorial I followed.
+                        </p>
+                        <p class="text-secondary fs-5 mb-0">
+                            I improved the game by making the three levels become
+                            progressively harder, a combo system for catching balls quickly,
+                            glowing targets, animated stars, and particle effects. The bonus
+                            stars reward players for taking chances, while the timer adds
+                            pressure and makes each round more challenging. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Source Code -->
+    <section class="py-5">
+        <div class="container py-3">
+            <div class="text-center mb-5">
+                <p class="text-uppercase fw-bold text-secondary mb-2">
+                    Behind the Scenes
+                </p>
+                <h2 class="display-6 fw-bold">
+                    Source Code
+                </h2>
+                <p class="text-secondary">
+                    Explore the JavaScript functions that power Ball Hunter's gameplay and visual effects.
+                </p>
+            </div>
+            <div class="p5-source-container">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-secondary fw-bold">
+                        Ball Hunter - JavaScript
+                    </span>
+                    <button class="btn btn-custom btn-sm"
+                            onclick="copyGameCode()">
+                        Copy Code
+                    </button>
+                </div>
+                <div class="p5-code-container">
+                    <pre><code id="gameSourceCode">
+var ballx = 300;
+var bally = 300;
+var ballSize = 40;
+var ballVX = 2;
+var ballVY = 1.5;
+var score = 0;
+var gameState = "START";
+var startTime = 0;
+var timeLeft = 30;
+var bonusX = 150;
+var bonusY = 150;
+var bonusSize = 25;
+var bonusVisible = false;
+var bonusEndTime = 0;
+var nextBonusTime = 0;
+var particles = [];
+var stars = [];
+var combo = 0;
+var lastCatchTime = 0;
+var shake = 0;
+var flash = 0;
+
+function setup() {
+  createCanvas(600, 600);
+  textAlign(CENTER);
+  textSize(20);
+  // Create background stars
+  for (var i = 0; i < 70; i++) {
+    stars.push({
+      x: random(width), y: random(height),
+      size: random(1, 4), speed: random(0.3, 1.5)
+    });
+  }
+}
+
+function draw() {
+  if (gameState == "START") {
+    startScreen();
+  }
+  if (gameState == "PLAY") {
+    playGame();
+  }
+  if (gameState == "WIN") {
+    endScreen(true);
+  }
+  if (gameState == "GAMEOVER") {
+    endScreen(false);
+  }
+}
+
+// BACKGROUND
+function drawBackground() {
+  background(15, 10, 40);
+  noStroke();
+  for (var i = 0; i < stars.length; i++) {
+    fill(180, 180, 255, 180);
+    ellipse(stars[i].x, stars[i].y, stars[i].size);
+    stars[i].y += stars[i].speed;
+    if (stars[i].y > height) {
+      stars[i].y = 0;
+      stars[i].x = random(width);
+    }
+  }
+}
+
+// START SCREEN
+function startScreen() {
+  drawBackground();
+  fill(255, 210, 50);
+  textSize(48);
+  text("BALL HUNTER", width/2, 190);
+  fill(255, 220, 50, 80);
+  ellipse(150, 270, 65);
+  ellipse(450, 270, 65);
+  fill(255, 220, 50);
+  ellipse(150, 270, 35);
+  ellipse(450, 270, 35);
+  fill(255);
+  textSize(19);
+  text("Catch the balls to earn points!", width/2, 340);
+  textSize(16);
+  text("Reach 30 points before time runs out.", width/2, 380);
+  text("Catch bonus stars for extra points!", width/2, 410);
+  fill(100, 220, 255);
+  textSize(22);
+  text("CLICK OR PRESS SPACE TO START", width/2, 490);
+}
+
+// MAIN GAME
+function playGame() {
+  var level = 1;
+  if (score >= 10) {
+    level = 2;
+  }
+  if (score >= 20) {
+    level = 3;
+  }
+  drawBackground();
+  // Timer
+  timeLeft = 30 - floor((millis() - startTime) / 1000);
+  if (timeLeft <= 0) {
+    timeLeft = 0;
+    gameState = "GAMEOVER";
+    return;
+  }
+  // Screen shake
+  push();
+  if (shake > 0) {
+    translate(random(-shake, shake), random(-shake, shake));
+    shake *= 0.85;
+  }
+  // Ball
+  updateBall(level);
+  drawBall(level);
+  // Bonus star
+  updateBonus();
+  drawBonus();
+  // Mouse targeting circle
+  noFill();
+  stroke(100, 220, 255, 180);
+  strokeWeight(2);
+  ellipse(mouseX, mouseY, 35 + sin(frameCount * 0.1) * 5);
+  noStroke();
+  // Catch ball
+  var distanceToBall = dist(ballx, bally, mouseX, mouseY);
+  if (distanceToBall < ballSize/2 + 10) {
+    score++;
+    if (millis() - lastCatchTime < 2000) {
+      combo++;
+    } else {
+      combo = 1;
+    }
+    lastCatchTime = millis();
+    createParticles(ballx, bally, 20);
+    resetBall();
+    shake = 7;
+    flash = 15;
+    if (score >= 30) {
+      gameState = "WIN";
+    }
+  }
+  // Catch bonus star
+  if (bonusVisible) {
+    var distanceToBonus = dist(bonusX, bonusY, mouseX, mouseY);
+    if (distanceToBonus < bonusSize + 10) {
+      score += 3;
+      bonusVisible = false;
+      createParticles(bonusX, bonusY, 30);
+      shake = 10;
+      nextBonusTime = millis() + 3000;
+      if (score >= 30) {
+        gameState = "WIN";
+      }
+    }
+  }
+  // Particles
+  updateParticles();
+  pop();
+  // Flash effect
+  if (flash > 0) {
+    fill(255, 255, 255, flash * 3);
+    rect(0, 0, width, height);
+    flash--;
+  }
+  drawHUD(level);
+}
+
+// MOVE THE BALL
+function updateBall(level) {
+  var speed = 2 + (level - 1) * 1.5;
+  var direction = sqrt(ballVX * ballVX + ballVY * ballVY);
+  ballx += ballVX / direction * speed;
+  bally += ballVY / direction * speed;
+  if (ballx < ballSize/2 || ballx > width - ballSize/2) {
+    ballVX *= -1;
+  }
+  if (bally < ballSize/2 || bally > height - ballSize/2) {
+    ballVY *= -1;
+  }
+}
+
+// DRAW THE BALL
+function drawBall(level) {
+  ballSize = 40 - (level - 1) * 8;
+  var colorChange = sin(frameCount * 0.08) * 30;
+  noStroke();
+  fill(255, 180 + colorChange, 40, 35);
+  ellipse(ballx, bally, ballSize + 35);
+  fill(255, 200, 50, 80);
+  ellipse(ballx, bally, ballSize + 15);
+  fill(255, 220 + colorChange, 60);
+  ellipse(ballx, bally, ballSize);
+  fill(255);
+  ellipse(ballx - 7, bally - 7, 9);
+}
+
+// RESET BALL
+function resetBall() {
+  ballx = random(50, width - 50);
+  bally = random(100, height - 80);
+  ballVX = random(-3, 3);
+  ballVY = random(-3, 3);
+  if (abs(ballVX) < 1) {
+    ballVX = 2;
+  }
+  if (abs(ballVY) < 1) {
+    ballVY = 2;
+  }
+}
+
+// BONUS STAR
+function updateBonus() {
+  if (!bonusVisible && millis() > nextBonusTime) {
+    bonusX = random(40, width - 40);
+    bonusY = random(100, height - 60);
+    bonusVisible = true;
+    bonusEndTime = millis() + 5000;
+  }
+  if (bonusVisible && millis() > bonusEndTime) {
+    bonusVisible = false;
+    nextBonusTime = millis() + 5000;
+  }
+}
+
+function drawBonus() {
+  if (bonusVisible) {
+    var pulse = sin(frameCount * 0.15) * 8;
+    noStroke();
+    fill(255, 80, 120, 50);
+    ellipse(bonusX, bonusY, 65 + pulse);
+    fill(255, 100, 140);
+    star(bonusX, bonusY, 12, 25 + pulse/2);
+  }
+}
+
+// DRAW STAR
+function star(x, y, innerRadius, outerRadius) {
+  beginShape();
+  for (var i = 0; i < 10; i++) {
+    var angle = TWO_PI * i / 10 - HALF_PI;
+    var radius = outerRadius;
+    if (i % 2 == 1) {
+      radius = innerRadius;
+    }
+    vertex(
+      x + cos(angle) * radius,
+      y + sin(angle) * radius
+    );
+  }
+  endShape(CLOSE);
+}
+
+// PARTICLE EFFECT
+function createParticles(x, y, amount) {
+  for (var i = 0; i < amount; i++) {
+    particles.push({
+      x: x,
+      y: y,
+      vx: random(-4, 4),
+      vy: random(-4, 4),
+      size: random(3, 8),
+      life: 255
+    });
+  }
+}
+
+function updateParticles() {
+  noStroke();
+  for (var i = particles.length - 1; i >= 0; i--) {
+    var p = particles[i];
+    p.x += p.vx;
+    p.y += p.vy;
+    p.life -= 5;
+    fill(255, 210, 70, p.life);
+    ellipse(p.x, p.y, p.size);
+    if (p.life <= 0) {
+      particles.splice(i, 1);
+    }
+  }
+}
+
+// SCORE AND LEVEL DISPLAY
+function drawHUD(level) {
+  fill(255);
+  noStroke();
+  textSize(19);
+  text("SCORE: " + score, 90, 35);
+  text("LEVEL: " + level, width/2, 35);
+  fill(255, 100, 130);
+  text("TIME: " + timeLeft, width - 90, 35);
+  // Progress bar
+  fill(70, 60, 100);
+  rect(150, 55, 300, 8, 5);
+  var progress = score % 10;
+  if (score >= 30) {
+    progress = 10;
+  }
+  fill(100, 220, 255);
+  rect(150, 55, 300 * progress / 10, 8, 5);
+  // Combo display
+  if (combo >= 2 && millis() - lastCatchTime < 2000) {
+    fill(255, 220, 50);
+    textSize(17);
+    text(combo + "X COMBO!", width/2, 100);
+  }
+  fill(255);
+  textSize(13);
+  text("Catch the red star for +3 points", width/2, height - 20);
+}
+
+// WIN AND GAME OVER
+function endScreen(won) {
+  drawBackground();
+  if (won) {
+    fill(255, 220, 50);
+    textSize(48);
+    text("YOU WIN!", width/2, 220);
+    fill(255, 220, 50);
+    for (var i = 0; i < 10; i++) {
+      ellipse(
+        random(50, 550),
+        random(300, 500),
+        random(5, 12)
+      );
+    }
+  } else {
+    fill(255, 100, 130);
+    textSize(43);
+    text("GAME OVER", width/2, 220);
+  }
+  fill(255);
+  textSize(25);
+  text("FINAL SCORE: " + score, width/2, 300);
+  textSize(18);
+  textSize(20);
+  text("TIME LEFT: " + timeLeft + " seconds", width/2, 340);
+  text("Click or press R to play again", width/2, 390);
+}
+
+// START AND RESTART
+function mousePressed() {
+  if (gameState == "START" ||
+      gameState == "WIN" ||
+      gameState == "GAMEOVER") {
+    beginGame();
+  }
+}
+
+function keyPressed() {
+  if (key == ' ' && gameState == "START") {
+    beginGame();
+  }
+  if (key == 'r' || key == 'R') {
+    beginGame();
+  }
+}
+
+// RESET GAME
+function beginGame() {
+  score = 0;
+  ballx = 300;
+  bally = 300;
+  ballVX = 2;
+  ballVY = 1.5;
+  ballSize = 40;
+  startTime = millis();
+  bonusVisible = false;
+  nextBonusTime = millis() + 3000;
+  combo = 0;
+  lastCatchTime = 0;
+  shake = 0;
+  flash = 0;
+  particles = [];
+  gameState = "PLAY";
+}
+                    </code></pre>
+                </div>
+                <p class="text-secondary small mt-3 mb-0">
+                    Scroll through the code or use the Copy Code button to view it.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Portfolio -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="text-center">
+                <a href="index.html" class="btn btn-custom">
+                    &larr; Back to Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+    <script>
+        function copyGameCode() {
+            const code = document.getElementById("gameSourceCode").textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                alert("Code copied!");
+            }).catch(() => {
+                alert("Unable to copy code. Please select and copy it manually.");
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
